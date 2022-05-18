@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Little Photography-Prices</title>
+		
+		<link rel="stylesheet" href="styles.css">
+		
+	</head>
+	
+	<body>
+	
+		<header>
+			<section class="background">
+						<!--login shuff-->
+			<div class="login-container">
+				<form action="myaccount.html">
+					<input type="text" placeholder="Username" name="username">
+					<input type="text" placeholder="Password" name="psw">
+					<button type="submit">Login</button>
+				</form>
+			</div>
+<!----------------------------------------------------->
+			<h1>Little Photography</h1>
+			<h3>Capturing Big Moments</h3>
+			<h5>Chillicothe, OH.<h5>
+		</header>
+		
+		<nav id="tabs_nav">
+			<ul>
+				<li><a href="index.html">Home Page</a></li>
+				<li><a href="contactus.html">Contact Us</a></li>
+				<li><a href="touchup.html">Request Touch-Up</a></li>
+				<li><a href="cart.html">Cart</a></li>
+				<li><a href="Gallery.html">Photo Gallery</a></li>
+				<li><a href="crop.html">Crop an Image</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="newuser.html">New User</a></li>
+				<li><a href="prices.html">Rates</a></li>
+			</ul>
+		</nav> 
+		
+		<br>
+		
+		<main class = "mainpage">
+		<div class="row">
+			<div class="column">
+			<p class="type"><u>Package One $150</u></p>
+				<p class="contact">1 Hour Session</p>
+				<p class="contact">15 Digital Photos</p>
+				<p class="contact">Professionally Edited</p>
+				<p class="contact">Print release</p><br>
+			<p class="type"><u>Package Two $200</u></p>
+				<p class="contact">1.5 Hour Session</p>
+				<p class="contact">25 Digital Photos</p>
+				<p class="contact">Professionally Edited</p>
+				<p class="contact">Print release</p><br>
+			</div>		
+			<div class="column">
+			<p class="type"><u>Package Three $250</u></p>
+				<p class="contact">2 Hour Session</p>
+				<p class="contact">35 Digital Photos</p>
+				<p class="contact">Professionally Edited</p>
+				<p class="contact">Print release</p><br>
+			<p class="type"><u>Package Four $300</u></p>
+				<p class="contact">2.5 Hour Session</p>
+				<p class="contact">45 Digital Photos</p>
+				<p class="contact">Professionally Edited</p>
+				<p class="contact">Print release</p><br>
+			</div>
+		</div>
+		<h6>Every Session Will Require A $75 Deposit Fee<h6><br><br>
+		
+		<!-----------chat--------------->
+			<button class="open-button" onclick="openForm()">Chat</button>
+			<div class="chat-popup" id="myForm">
+				<form action="/action_page.php" class="form-container">
+					<label for="msg"><b>Message</b></label>
+					<textarea placeholder="Type message.." name="msg" required></textarea>
+					<button type="submit" class="btn">Send</button>
+					<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+				</form>
+			</div>
+		</main>
+		
+		<footer class = "navbar">
+			<p>
+				<a href="index.html">Home Page</a>
+				<a href="contactus.html">Contact Us</a>
+				<a href="touchup.html">Need a Touch up?</a>
+				<a href="cart.html">Cart</a>
+				<a href="Gallery.html">Photo Gallery</a>
+				<a href="crop.html">Crop an Image</a>
+				<a href="aboutus.html">About Us</a>
+				<a href="login.html">Login</a>
+				<a href="newuser.html">New User</a>
+				<a href="prices.html">Prices</a>
+			</p>
+		</footer>
+		<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+		</script>
+	</body>
+</html>

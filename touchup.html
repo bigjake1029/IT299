@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Little Photography-Crop</title>
+		
+		<link rel="stylesheet" href="styles.css">
+		
+	</head>
+	
+	<body>
+	
+		<header>
+			<section class="background">
+						<!--login shuff-->
+			<div class="login-container">
+				<form action="myaccount.html">
+					<input type="text" placeholder="Username" name="username">
+					<input type="text" placeholder="Password" name="psw">
+					<button type="submit">Login</button>
+				</form>
+			</div>
+<!----------------------------------------------------->
+			<h1>Little Photography</h1>
+			<h3>Capturing Big Moments</h3>
+			<h5>Chillicothe, OH.<h5>
+		</header>
+		
+		<nav id="tabs_nav">
+			<ul>
+				<li><a href="index.html">Home Page</a></li>
+				<li><a href="contactus.html">Contact Us</a></li>
+				<li><a href="touchup.html">Request Touch-Up</a></li>
+				<li><a href="cart.html">Cart</a></li>
+				<li><a href="Gallery.html">Photo Gallery</a></li>
+				<li><a href="crop.html">Crop an Image</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="newuser.html">New User</a></li>
+				<li><a href="prices.html">Rates</a></li>
+			</ul>
+		</nav> 	
+		<br>
+		<main>
+		<center>
+			<h4>Want us to touch up a photo?</h4>
+			<h6>Fill out the form below.</h6>
+				<br><br>
+			<form action="confirmation.html">
+				<label for="selectpic"><h2>Select images:</h2></label>
+				<input type="file" id="selectpic" name="selectpic" multiple required>
+					<br><br>
+					
+				<h2>Check mark below what you would like done.</h2>
+				<br>
+				<label for="black/white">Black and White</label>
+					<input type="checkbox" id="black/white" name="black/white"><br><br>
+				<label for="Sepia">Sepia</label>
+					<input type="checkbox" id="Sepia" name="Sepia"><br><br>
+				<label for="wrinkles">Soften Facial Creases</label>
+					<input type="checkbox" id="wrinkles" name="wrinkles"><br><br>
+				<label for="smoothskin">Remove Blemishes</label>
+					<input type="checkbox" id="smoothskin" name="smoothskin"><br><br>
+				<label for="teeth">Whiten Smile</label>
+					<input type="checkbox" id="teeth" name="teeth"><br><br>
+				<label for="crop">Crop</label>
+				<label>If marked, tell us what you want removed.</label>
+					<input type="checkbox" id="crop" name="crop" onclick="cropbox()"><br><br>
+						<input type="text" id="box" name="box" style="border: solid; width: 30%; font-size: 1em; display:none;">
+					
+				<label for="other">Additional Comments<label>
+					<input type="text" id="other" name="other" style="border: solid; width: 30%; font-size: 1em;  word-break: break-all;">
+				<br><br>
+				</center>
+				<input type="submit" class="receipt" value="Submit" style="left:38%">
+			</form>
+
+			<br><br>
+			<!-----------chat--------------->
+			<button class="open-button" onclick="openForm()">Chat</button>
+			<div class="chat-popup" id="myForm">
+				<form action="/action_page.php" class="form-container">
+					<label for="msg"><b>Message</b></label>
+					<textarea placeholder="Type message.." name="msg" required></textarea>
+					<button type="submit" class="btn">Send</button>
+					<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+				</form>
+			</div>
+		
+		</main>
+		
+		<footer class = "navbar">
+			<p>
+				<a href="index.html">Home Page</a>
+				<a href="contactus.html">Contact Us</a>
+				<a href="touchup.html">Need a Touch up?</a>
+				<a href="cart.html">Cart</a>
+				<a href="Gallery.html">Photo Gallery</a>
+				<a href="crop.html">Crop an Image</a>
+				<a href="aboutus.html">About Us</a>
+				<a href="login.html">Login</a>
+				<a href="newuser.html">New User</a>
+				<a href="prices.html">Prices</a>
+			</p>
+			
+<script>
+function cropbox() {
+  var checkBox = document.getElementById("crop");
+  var text = document.getElementById("box", "labelbox");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}		
+</script>
+		</footer>
+	</body>
+</html>

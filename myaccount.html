@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Little Photography-My Account</title>
+		<link rel="stylesheet" href="styles.css">	
+	</head>
+	
+	<body>
+	
+		<header>
+			<section class="background">
+						<!--login stuff-->
+			<div class="login-container">
+				<form>
+					<input type="text" placeholder="Username" name="username">
+					<input type="text" placeholder="Password" name="psw">
+					<button type="submit">Login</button>
+				</form>
+			</div>
+<!----------------------------------------------------->
+			<h1>Little Photography</h1>
+			<h3>Capturing Big Moments</h3>
+			<h5>Chillicothe, OH.<h5>
+		</header>
+		
+		<nav id="tabs_nav">
+			<ul>
+				<li><a href="index.html">Home Page</a></li>
+				<li><a href="contactus.html">Contact Us</a></li>
+				<li><a href="touchup.html">Request Touch-Up</a></li>
+				<li><a href="Gallery.html">Photo Gallery</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="prices.html">Rates</a></li>
+			</ul>
+		</nav> 
+		<br>
+		<main>
+				<h4>Your Pictures</h4><br>
+			<form  action="cart.html">
+				<input type="submit" value="Purchase Photos" class="checkout">
+			</form>
+		<img src="images/our vow renewal.jpg" alt="wedding and mountains" class="pics">
+		<img src="images/wedding fields.png" alt="wedding fields" class="pics">
+		<img src="images/fetty.jpg" alt="fat orange cat" class="pics">
+		<img src="images/kitty.jpg" alt="perfect calico cat" class="pics"><img src="images/family.jpg" alt="sisters" class="pics">
+		<img src="images/piper.jpg" alt="child" class="pics">
+		<img src="images/graduation.jpg" alt="grads" class="pics">
+		<img src="images/senior photo.jpg" alt="senior" class="pics">
+		<img src="images/team.jpg" alt="team of sky divers" class="pics">
+			
+			
+			<br><br>
+			<!-----------chat--------------->
+			<button class="open-button" onclick="openForm()">Chat</button>
+			<div class="chat-popup" id="myForm">
+				<form action="/action_page.php" class="form-container">
+					<label for="msg"><b>Message</b></label>
+					<textarea placeholder="Type message.." name="msg" required></textarea>
+					<button type="submit" class="btn">Send</button>
+					<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+				</form>
+			</div>
+		</main>
+		
+		<footer class = "navbar">
+			<p>
+				<a href="index.html">Home Page</a>
+				<a href="contactus.html">Contact Us</a>
+				<a href="touchup.html">Need a Touch up?</a>
+				<a href="cart.html">Cart</a>
+				<a href="Gallery.html">Photo Gallery</a>
+				<a href="crop.html">Crop an Image</a>
+				<a href="aboutus.html">About Us</a>
+				<a href="login.html">Login</a>
+				<a href="myaccount.html">My Account</a>
+				<a href="prices.html">Prices</a>
+			</p>
+		</footer>
+		<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+		</script>
+		
+	</body>
+</html>

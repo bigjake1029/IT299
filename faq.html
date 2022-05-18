@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Little Photography-Login</title>
+		
+		<link rel="stylesheet" href="styles.css">
+	
+	</head>
+	
+	<body>
+	
+		<header>
+			<section class="background">
+						<!--login shuff-->
+			<div class="login-container">
+				<form action="myaccount.html">
+					<input type="text" placeholder="Username" name="username">
+					<input type="text" placeholder="Password" name="psw">
+					<button type="submit">Login</button>
+				</form>
+			</div>
+<!----------------------------------------------------->
+			<h1>Little Photography</h1>
+			<h3>Capturing Big Moments</h3>
+			<h5>Chillicothe, OH.<h5>
+		</header>
+		
+		<nav id="tabs_nav">
+			<ul>
+				<li><a href="index.html">Home Page</a></li>
+				<li><a href="contactus.html">Contact Us</a></li>
+				<li><a href="touchup.html">Request Touch-Up</a></li>
+				<li><a href="cart.html">Cart</a></li>
+				<li><a href="Gallery.html">Photo Gallery</a></li>
+				<li><a href="crop.html">Crop an Image</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="newuser.html">New User</a></li>
+				<li><a href="prices.html">Rates</a></li>
+			</ul>
+		</nav> 
+		
+		<br>
+		
+		<main>
+			<p class="type">What types of sessions do you offer?</p><br>
+			<p>There is not a single thing that we dont photograph. If you can think of it, we will most likely take photos of it.</p><br><br>
+			<p class="type">When will we recieve our images?</p><br>
+			<p>We ask for up to 6 weeks to deliver a full wedding gallery. For any other type of session, we ask for up to 2 weeks.</p><br><br>
+			<p class="type">What if I have to cancel/reschedule?</p><br>
+			<p>If plans change last minute, we will keep your deposit till your next session with us. Otherwise, with a one week notice, we will return your deposit and try to reschedule.</p><br><br>
+			<p class="type">Will I have full ownership of the photos?</p><br>
+			<p>Yes, once delivered, you have the right to do what ever you would like with the photographs</p><br><br>
+			<p class="type">What are your travel fees?</p><br>
+			<p>We request travel fews for destinations that are further than two hours away. To recieve a more accurate estimate for your location, please contact us!</p><br><br>
+		
+		<!-----------chat--------------->
+			<button class="open-button" onclick="openForm()">Chat</button>
+			<div class="chat-popup" id="myForm">
+				<form action="/action_page.php" class="form-container">
+					<label for="msg"><b>Message</b></label>
+					<textarea placeholder="Type message.." name="msg" required></textarea>
+					<button type="submit" class="btn">Send</button>
+					<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+				</form>
+			</div>
+		</main>
+		
+		<footer class = "navbar">
+			<p>
+				<a href="index.html">Home Page</a>
+				<a href="contactus.html">Contact Us</a>
+				<a href="touchup.html">Need a Touch up?</a>
+				<a href="cart.html">Cart</a>
+				<a href="Gallery.html">Photo Gallery</a>
+				<a href="crop.html">Crop an Image</a>
+				<a href="aboutus.html">About Us</a>
+				<a href="faq.html">FAQ</a>
+				<a href="newuser.html">New User</a>
+				<a href="prices.html">Prices</a>
+			</p>
+		</footer>
+		<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+		</script>
+	</body>
+</html>
