@@ -25,6 +25,9 @@ function openForm() {
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
+function myFunction() {
+  document.getElementById("txt2").value += document.getElementById("txt").value;
+}
 </script>
 			<!--login stuff-->
 			<div class="login-container">
@@ -44,12 +47,9 @@ function closeForm() {
 			<ul>
 				<li><a href="index.html">Home Page</a></li>
 				<li><a href="aboutus.html">About Us</a></li>
-				<li><a href="portfolio.html">Portfolio</a></li>
 				<li><a href="prices.html">Rates</a></li>
-				<li><a href="consultation.html">Request A Consultation</a></li>
 				<li><a href="faq.html">FAQ</a></li>
 				<li><a href="contactus.html">Contact Us</a></li>
-
 			</ul>
 		</nav> 
 		
@@ -60,16 +60,16 @@ function closeForm() {
 			<br>
 		
 			<h6>Wedding<h6>
-				<img src="images/our vow renewal.jpg" alt="wedding and mountains" class="pics">
-				<img src="images/wedding fields.png" alt="wedding fields" class="pics">
+				<img src="images/our vow renewal.JPG" alt="wedding and mountains" class="pics">
+				<img src="images/wedding fields.PNG" alt="wedding fields" class="pics">
 				<p></p>
 			<h6>Pets<h6>
 				<img src="images/fetty.jpg" alt="fat orange cat" class="pics">
-				<img src="images/kitty.jpg" alt="perfect calico cat" class="pics">
+				<img src="images/kitty.JPG" alt="perfect calico cat" class="pics">
 				<p></p>
 			<h6>Family<h6>
-				<img src="images/family.jpg" alt="sisters" class="pics">
-				<img src="images/piper.jpg" alt="child" class="pics">
+				<img src="images/family.JPG" alt="sisters" class="pics">
+				<img src="images/piper.JPG" alt="child" class="pics">
 			<h6>...and More<h6>
 				<img src="images/graduation.jpg" alt="grads" class="pics">
 				<img src="images/senior photo.jpg" alt="senior" class="pics">
@@ -77,13 +77,13 @@ function closeForm() {
 			<br><br>
 <!-----------chat--------------->
 			<button class="open-button" onclick="openForm()">Chat</button>
-			<div class="chat-popup" id="myForm">
-				<form action="/action_page.php" class="form-container">
+			<div  id="myForm" class="form-container">
+				
 					<label for="msg"><b>Message</b></label>
-					<textarea placeholder="Type message.." name="msg" required></textarea>
-					<button type="submit" class="btn">Send</button>
+					<input type="text" name="msg" id="txt2" readonly>
+					<input type="text" placeholder="Type message.." id="txt"required>
+					<button onclick="myFunction()" class="btn">Send</button>
 					<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-				</form>
 			</div>
 
 		</main>
@@ -91,25 +91,13 @@ function closeForm() {
 		<footer class = "navbar">
 			<p>
 				<a href="index.html">Home Page</a>
-				<a href="contactus.html">Contact Us</a>
-				<a href="touchup.html">Need a Touch up?</a>
-				<a href="cart.html">Cart</a>
-				<a href="Gallery.html">Photo Gallery</a>
-				<a href="crop.html">Crop an Image</a>
 				<a href="aboutus.html">About Us</a>
-				<a href="login.html">Login</a>
-				<a href="newuser.html">New User</a>
-				<a href="prices.html">Prices</a>
+				<a href="prices.html">Rates</a>
+				<a href="faq.html">FAQ</a>
+				<a href="contactus.html">Contact Us</a>
 			</p>
+			<br>
+			<h2>&copy Charles Little. Purdue Global EDU 2022<h2>
 		</footer>
-		<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-		</script>
 	</body>
 </html>

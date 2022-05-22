@@ -32,19 +32,22 @@
 		<nav id="tabs_nav">
 			<ul>
 				<li><a href="index.html">Home Page</a></li>
-				<li><a href="contactus.html">Contact Us</a></li>
-				<li><a href="touchup.html">Request Touch-Up</a></li>
-				<li><a href="cart.html">Cart</a></li>
-				<li><a href="Gallery.html">Photo Gallery</a></li>
-				<li><a href="crop.html">Crop an Image</a></li>
 				<li><a href="aboutus.html">About Us</a></li>
-				<li><a href="faq.html">FAQ</a></li>
-				<li><a href="newuser.html">New User</a></li>
 				<li><a href="prices.html">Rates</a></li>
+				<li><a href="touchup.html">Request Touch-Up</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="contactus.html">Contact Us</a></li>
 			</ul>
-		</nav> 
+		</nav>
 		
 		<br>
+			
+		<ul class="breadcrumb">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="myaccount.html">My Account</a></li>
+			<li><a href="cart.html">Cart</a></li>
+			<li>Payment Information</li>
+		</ul>
 		
 		<main>
 			<!------payment coding---------->
@@ -78,14 +81,6 @@
           </div>
 
           <div class="col-50">
-            <h3>Payment</h3>
-            <label for="fname">Accepted Cards</label>
-            <div class="icon-container">
-              <i class="fa fa-cc-visa" style="color:navy;"></i>
-              <i class="fa fa-cc-amex" style="color:blue;"></i>
-              <i class="fa fa-cc-mastercard" style="color:red;"></i>
-              <i class="fa fa-cc-discover" style="color:orange;"></i>
-            </div>
             <label for="cname">Name on Card</label>
             <input type="text" id="cname" name="cardname" placeholder="John More Doe">
             <label for="ccnum">Credit card number</label>
@@ -109,27 +104,11 @@
         <label>
           <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
         </label>
-        <input type="submit" value="Continue to checkout" class="btn" href=>
+        <input type="submit" value="Checkout" class="btn" href=>
       </form>
     </div>
   </div>
 
-  <div class="col-25">
-    <div class="container">
-      <h4>Cart
-        <span class="price" style="color:black">
-          <i class="fa fa-shopping-cart"></i>
-          <b>4</b>
-        </span>
-      </h4>
-      <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-      <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-      <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-      <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-      <hr>
-      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
-    </div>
-  </div>
 </div>
 
 			<!--------------------------->
@@ -138,18 +117,13 @@
 		<footer class = "navbar">
 			<p>
 				<a href="index.html">Home Page</a>
-				<a href="contactus.html">Contact Us</a>
-				<a href="touchup.html">Need a Touch up?</a>
-				<a href="cart.html">Cart</a>
-				<a href="Gallery.html">Photo Gallery</a>
-				<a href="crop.html">Crop an Image</a>
 				<a href="aboutus.html">About Us</a>
-				<a href="login.html">Login</a>
-				<a href="newuser.html">New User</a>
-				<a href="prices.html">Prices</a>
+				<a href="prices.html">Rates</a>
+				<a href="faq.html">FAQ</a>
+				<a href="contactus.html">Contact Us</a>
 			</p>
+			<br>
+			<h2>&copy Charles Little. Purdue Global EDU 2022<h2>
 		</footer>
-		
-		
 	</body>
 </html>

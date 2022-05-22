@@ -268,9 +268,12 @@ h6 {
 .pics {
 	width: 300px;
 	height:350px;
-	border: 9px solid #000;
+	border: 5px solid #000;
 	margin: 25px;
 	justify-content: center;
+	opacity: 1;
+	transition: .5s ease;
+	backface-visibility: hidden;
 	}
 .mypics {
 	width: 300px;
@@ -306,6 +309,16 @@ input {
 
 .checkout:hover {
 	background-color:#d7f3f6;
+}
+.type{
+	color: #797a7e;
+	display: flex;
+	justify-content: center;
+}
+.column {
+	text-align: center;
+	margin: auto;
+	width: 50%;
 }
 
 /*------Online Payment-----------*/
@@ -412,7 +425,7 @@ span.price {
 }
 
 /*-------cart coding------------*/
-.cart{
+.cart {
  margin: 0;
  padding: 0;
  background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
@@ -421,7 +434,7 @@ span.price {
  justify-content: center;
  align-items: center;
 }
-.CartContainer{
+.Cart-Container{
  width: 70%;
  height: 85%;
  background-color: #ffffff;
@@ -462,14 +475,52 @@ span.price {
  width: 15%;
  text-align: center;
 }
-hr{
- width: 100%;
- float: left;
-
+.counter{
+ width: 15%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 }
-.checkout2{
- float: left;
- margin-right: 125%;
+.count{
+ font-size: 20px;
+ font-family: ‘Open Sans’;
+ font-weight: 900;
+ color: #202020;
+}
+.prices{
+ height: 100%;
+ text-align: right;
+}
+.amount{
+ padding-top: 20px;
+ font-size: 26px;
+ font-family: ‘Open Sans’;
+ font-weight: 800;
+ color: #202020;
+}
+.save{
+ padding-top: 5px;
+ font-size: 14px;
+ font-family: ‘Open Sans’;
+ font-weight: 600;
+ color: #1687d9;
+ cursor: pointer;
+}
+.remove{
+ padding-top: 5px;
+ font-size: 14px;
+ font-family: ‘Open Sans’;
+ font-weight: 600;
+ color: #E44C4C;
+ cursor: pointer;
+}hr{
+ width: 66%;
+ float: right;
+ margin-right: 5%;
+}
+.checkout1{
+ float: right;
+ margin-right: 5%;
  width: 28%;
 }
 .total{
@@ -477,13 +528,20 @@ hr{
  display: flex;
  justify-content: space-between;
 }
-.Subtotal{
+.Subtotal1{
  font-size: 22px;
  font-family: ‘Open Sans’;
  font-weight: 700;
  color: #202020;
 }
-.total-amount{
+.items1{
+ font-size: 16px;
+ font-family: ‘Open Sans’;
+ font-weight: 500;
+ color: #909090;
+ line-height: 10px;
+}
+.total-amount1{
  font-size: 36px;
  font-family: ‘Open Sans’;
  font-weight: 900;
@@ -501,28 +559,6 @@ hr{
  font-family: ‘Open Sans’;
  font-weight: 600;
  color: #202020;
-}
-/*---------Contact Page---------*/
-.type{
-	font-family: 'Times New Roman';
-    font-size: 2.5em;
-	font-family: Palatino;
-}
-.contact{
-	font-family: 'Times New Roman';
-    font-size: 2.5em;
-	color: #797a7e;
-	font-family: Palatino;
-}
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
- }
- .row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 /*-------------Footer-------------*/
 .navbar {
@@ -601,21 +637,30 @@ footer p a{
 }
 /*--------------chat-----------------*/
 .open-button {
-  background-color: #555;
-  color: white;
+  background-color: #c2f2f5;
+  color: black;
   padding: 16px 20px;
-  border: none;
+  border: solid;
   cursor: pointer;
   opacity: 0.8;
   position: fixed;
   bottom: 23px;
   right: 28px;
   width: 280px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-/* The popup chat - hidden by default */
+
 .chat-popup {
-  display: none;
+ 
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+   display: none;
   position: fixed;
   bottom: 0;
   right: 15px;
@@ -623,14 +668,6 @@ footer p a{
   z-index: 9;
 }
 
-/* Add styles to the form container */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
-
-/* Full-width textarea */
 .form-container textarea {
   width: 100%;
   padding: 15px;
@@ -638,16 +675,14 @@ footer p a{
   border: none;
   background: #f1f1f1;
   resize: none;
-  min-height: 200px;
+  max-height: 200px;
 }
 
-/* When the textarea gets focus, do something */
 .form-container textarea:focus {
   background-color: #ddd;
   outline: none;
 }
 
-/* Set a style for the submit/send button */
 .form-container .btn {
   background-color: #04AA6D;
   color: white;
@@ -659,12 +694,33 @@ footer p a{
   opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: red;
 }
 
-/* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
+}
+/*-------------Breadcrumbs-------------*/
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
 }
